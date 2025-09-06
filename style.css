@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: hsl(30, 27%, 94%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 40px 0 70px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+}
+
+
+.right img {
+    margin-right: 30px;
+}
+
+.right, .left{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: .15s;
+}
+
+.nav-links a:hover {
+    background-color: white;
+}
+
+.nav-links a:active {
+    color: hsl(27, 66%, 67%);
+}
+
+.left button {
+    background: hsl(27, 81%, 33%);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 17px;
+    color: white;
+    font-size: .9em;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.left button:hover {
+    border: 3px solid hsl(27, 81%, 33%);
+    padding: 10px 15px;
+    color: hsl(27, 81%, 33%);
+    background: hsl(27, 56%, 93%);
+}
+
+.left button:active {
+    background: hsl(27, 81%, 33%);   
+    color: white;
+}
+
+.left img {
+    display: none;
+}
+
+.left img:active {
+    width: 24px;
+}
+
+.hero-section {
+    padding: 4em 10em;
+    background: hsl(26, 16%, 70%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section h3 {
+    font-size: 2.2em;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin: .6em 0;
+}
+
+.hero-img img{
+    width: 250px;
+}
+
+.hero-left button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    background: hsl(27, 81%, 33%);
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.hero-left button:hover {
+    color: hsl(27, 81%, 33%);
+    background: hsl(30, 27%, 84%);
+    border: 2px solid hsl(27, 81%, 33%);
+    padding: 8px 20px;
+}
+
+.hero-left button:active {
+    background: hsl(27, 81%, 33%);   
+    color: white;
+}
+
+.about {
+    background: hsla(27, 66%, 67%, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4em 10em;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 7px;
+    margin-right: 5em;
+}
+
+.about-text h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 1.3em;
+    margin: .5em 0;
+    font-weight: 500;
+}
+
+.treats {
+    padding: 4em 10em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: hsla(27, 66%, 67%, 0.15);
+}
+
+.treat-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.treat-head h3 {
+    font-size: 1.7em;
+}
+
+.treat-body p {
+    font-size: 1.1em;
+    margin-left: 4em;
+}
+
+.treat-body {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card {
+    /* padding: 10px 5px; */
+    border-radius: 7px;
+    background: hsl(26, 62%, 88%);
+}
+
+.card-label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.card-label h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.card-label button {
+    border: 2px solid hsl(27, 55%, 32%);
+    border-radius: 5px;
+    padding: .5em;
+    margin-top: .5em;
+    background: hsl(27, 55%, 32%);
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    width: 80%;
+    margin: .5em auto;
+}
+
+.card-label button:hover {
+    color: hsl(27, 55%, 32%);
+    background: white;
+}
+
+.card-label button:active {
+    color: white;
+    background: hsl(27, 55%, 32%);
+}
+
+.card img {
+    width: 280px;
+    border-radius: 10px;
+    /* margin: 2em 1em; */
+}
+
+.testimony {
+    padding: 4em 10em;
+    display: flex;
+    flex-direction: column;
+    background: hsla(27, 66%, 67%, 0.15);
+}
+
+.testimony h3 {
+    font-size: 1.7em;
+}
+
+.test-cards {
+    padding: 2em 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.test-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: hsl(26, 62%, 88%);
+    width: 280px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.test-card-head {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.test-card-head p {
+    margin-top: .5em;
+    font-size: 1.3em;
+}
+
+.test-content {
+    font-size: 1.1em;
+}
+
+.test-card-head img {
+    width: 90px;
+    border-radius: 100%;
+    margin-right: .4em;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4em 10em;
+}
+
+form, .follow {
+    width: 70%;
+    height: 100%;
+    background: hsla(27, 56%, 93%, 0.502);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); 
+    border: none;
+    border-radius: 7px;
+    padding: 2em;   
+}
+
+.follow {
+    width: 28%;
+    height: 350px;
+}
+
+.contact .follow h3 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+
+.contact h3 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+.contact form label {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.one input , textarea {
+    width: 100%;
+    padding: .5em ;
+    margin-bottom: 1em;
+    margin-top: .3em;
+    font-size: 1em;
+    border: 1px solid hsl(27, 55%, 32%);
+    border-radius: 7px;
+    background: white;
+}
+
+.one input:focus , textarea:focus {
+    outline: 2px solid hsl(27, 55%, 32%);
+    
+}
+.one input:active , textarea:active {
+    outline: 2px solid hsl(27, 55%, 32%);
+    /* outline: none; */
+    
+}
+
+form button {
+    width: 100%;
+    padding: .7em;
+    background: hsl(27, 55%, 32%);
+    border: 2px solid hsl(27, 55%, 32%);
+    border-radius: 7px;
+    color: white;
+    font-size: 1.15em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+form button:hover {
+    color: hsl(27, 55%, 32%);
+    background: white;
+}
+
+form button:active {
+    background: hsl(27, 55%, 32%);
+    color: white;
+}
+
+.one {
+    width: 100%;
+}
+
+.acc-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc-link a:hover {
+
+    color: white;
+    background: hsl(27, 55%, 32%);
+}
+
+.acc-link a:active{
+    background-color: hsl(28, 54%, 22%);
+}
+
+.acc-link a {
+    padding: .5em 1em;
+    color: hsl(27, 55%, 32%);
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 7px;
+    border: 3px solid hsl(27, 55%, 32%);
+    background: white;
+    margin: .3em 0;
+    transition: .2s;
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+.order input, .order select {
+    font-size: 1em;
+    padding: 3px 2px;
+    width: 70%;
+    border: 2px solid hsl(27, 55%, 32%);
+    border-radius: 5px;
+}
+
+.order input {
+    text-align: right;
+
+}
+
+.orders button {
+    padding: 8px;
+    border: 2px solid hsl(27, 55%, 32%);
+    background: white;
+    margin-top: 7px;
+    border-radius: 7px;
+    font-size: 1em;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.orders button:hover {
+    background: hsl(27, 55%, 32%);
+    color: white;
+}
+
+.orders button:active {
+    background: hsl(27, 60%, 20%);
+}

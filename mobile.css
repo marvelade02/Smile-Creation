@@ -1,0 +1,232 @@
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background: hsl(27, 24%, 93%);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1005;
+    padding: 10px 0;
+    list-style: none;
+    /* transform: translateY(50); */
+    display: none;
+}
+
+.side-bar li {
+    width: 100%;
+    /* padding: 1px 0; */
+}
+
+.side-bar a:hover {
+    background: white;
+}
+
+.side-bar a:active{
+    color: hsl(27, 66%, 67%);
+}
+
+.side-bar a {
+    display: flex;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    font-size: .9em;
+}
+
+.side-bar img {
+    padding: 5px 20px 5px 5px;
+}
+
+.side-bar img:active {
+    background-color: black;
+
+}
+
+@media (max-width:1025px) {
+   body .navbar {
+        font-size: .8em;
+        padding: 0px 10px 0 10px;
+    }
+
+    body .nav-links a {
+        padding: 10px 15px;
+    }
+
+    body .hero-section, body .about {
+        padding: 4em 5em;
+        justify-content: space-between;
+    }
+
+    body .hero-section h3, body .about h3  {
+        font-size: 1.7em;
+    }
+
+    body .hero-section p, body .about p  {
+        font-size: 1.3em;
+    }
+
+    body .hero-left button {
+        font-size: 1.2em;
+    }
+        body .treat-body{
+        display: none;
+    }
+}
+
+@media (max-width:885px) {
+    body .right .nav-links, .left button {
+        display: none;
+    }
+
+    body .left img{
+        display: flex;
+    }
+
+    body .navbar {
+        padding: 0 30px;
+    }
+    body .hero-section, body .about {
+
+    }
+    body .hero-section img {
+        width: 170px;
+    }
+
+    body .about h3, body .hero-section h3 {
+        font-size: 2em;
+    }
+    
+    body .about  p, body .hero-section p {
+        font-size: 1.5em;
+    }
+    
+
+    body .hero-left button {
+        font-size: 1.5em;
+    }  
+
+    body .treat-body {
+        display: none;
+    }
+
+        body .treats,  body .testimony, body .about,  body .hero-section, body .contact {
+            padding: 60px 30px;
+            gap: 30px;
+        }
+            body .test-card, body .card img {
+        width: 270px;
+        margin: 10px 20px;
+    }
+
+    body .test-cards, body .cards {
+        gap: 30px;
+    }
+
+            body .contact {
+            flex-direction: column;
+            text-align: left;
+        }
+        body .top {
+            display: block;
+            margin: 0;
+        }
+
+        body .follow, body form {
+            width: 100%;
+        }        
+}
+
+@media (max-width:430px) {
+    body .right .nav-links, .left button {
+        display: none;
+    }
+
+    body .left img{
+        /* display: block; */
+    }
+
+    body .navbar {
+        padding: 0 10px;
+        width: 100%;
+    }
+    body .hero-section, body .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body .hero-img img {
+        display: none;
+    }
+    
+    body .about img {
+        width: 100%;
+        margin: 1px auto;
+    }
+
+    body .hero-left h3, body .about h3 {
+        font-size: 1.7em;
+    }
+
+    body .hero-section .hero-left p, body .about p {
+        font-size: 1.3em;
+        margin: 10px 0;
+    }
+
+    body .hero-left button {
+        font-size: 1em;
+        padding: 6px 15px;
+        margin-top: 5px;
+    }
+
+    body .hero-left button:hover {
+        font-size: 1em;
+        padding: 4px 13px;
+        border: 1px solid hsl(27, 81%, 33%);
+        background: white;
+        color: hsl(27, 81%, 33%);
+    }
+
+    body .test-cards,  body .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    body .test-card, body .card img {
+        width: 280px;
+    }
+
+        body .treats,  body .testimony, body .about,  body .hero-section, body .contact {
+            padding: 50px 20px;
+            gap: 30px;
+            /* text-align: center; */
+        }
+
+        body .treat-head {
+            display: block;
+        }
+
+        body .contact {
+            flex-direction: column;
+            text-align: left;
+        }
+
+        body .top {
+            display: block;
+            margin: 0;
+        }
+
+        body .follow, body form {
+            width: 100%;
+        }
+
+        body .testimony h3, body .treat-head h3 {
+            font-size: 2em;
+        }
+}

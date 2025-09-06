@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Treat Creation Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="right">
+            <div>
+                <img src="images/logo.png" alt="brand-logo" width="70px">
+            </div>
+            <div class="nav-links">
+                <a href="#hero-section">Home</a>
+                <a href="#treats">Treats</a>
+                <a href="#about">About</a>
+                <!-- <a href="#">Order</a> -->
+                <a href="#testimony">Testimonials</a>
+                <a href="#contact">Contact</a>        
+            </div>
+        </div>
+        <div class="left">
+            <button onclick="gotoTreats()">Order Now</button>
+            <img src="images/menu.png" alt="" width="25px" onclick="showSidebar()">
+        </div>
+
+    </nav>
+        <ul class="side-bar">
+            <li><img src="images/close.png" alt="" style="filter: invert();" onclick="hideSidebar()"></li>
+            <li><a href="#hero-section">Home</a></li>
+            <li><a href="#treats">Treats</a></li>                    <li><a href="#about">About</a></li>
+            <!-- <li><a href="#">Order</a></li> -->
+            <li><a href="#testimony">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li><button>Order Now</button></li> -->
+    </ul>
+
+    <div class="hero-section" id="hero-section">
+        <div class="hero-left">
+            <h3>Welcome to 
+<b>SMILE CREATIONS AND TREATS</b></h3>
+            <p><i>Crafted with Joy, Delivered with Love</i></p>
+            <button>Explore treats</button>
+        </div>      
+        <div class="hero-img">
+            <img src="images/cake.png" alt="cake">
+        </div> 
+    </div>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/copilot_image.jpeg" alt="">
+        </div>
+        <div class="about-text">
+            <h3>We turn cravings 
+into creations.</h3>
+            <p><i>Every treat is made with care, creativity, 
+and a sprinkle of love.</i></p>
+        </div>
+    </section>
+
+    <section class="treats" id="treats">
+        <div class="treat-head">
+            <h3>Treats</h3>
+            <div class="treat-body">
+                <p>Flavor</p>
+                <p>Size</p>
+                <p>Shape</p>
+                <p>Occasion</p>
+                <p>Add-ons</p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="images/craftcake.png" alt="">
+                <div class="card-label">
+                    <h3>Craft Cake</h3>
+                    <button onclick="Order1()" id="close1">Customize & Order</button>                
+                </div>
+                <div class="orders" id="order1">
+                    <div class="order">
+                        <label for="flavor">Flavor</label>
+                        <select name="flavor" id="flavor">
+                            <option value="" selected disabled></option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="creamy">Creamy</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="milky">Milky</option>
+                        </select>   
+                    </div>
+                    <div class="order">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                    </div>
+                    <button>Submit Order</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/cupcakes.png" alt="">
+                <div class="card-label">
+                    <h3>Cupcakes</h3>
+                    <button onclick="Order2()">Customize & Order</button>                
+                </div>
+                <div class="orders" id="order2">
+                    <div class="order">
+                        <label for="flavor">Flavor</label>
+                        <select name="flavor" id="flavor">
+                            <option value="" selected disabled></option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="creamy">Creamy</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="milky">Milky</option>
+                        </select>   
+                    </div>
+                    <div class="order">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                    </div>
+                    <button>Submit Order</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/cookies.png" alt="">
+                <div class="card-label">
+                    <h3>Cookies</h3>
+                    <button onclick="Order3()">Customize & Order</button>                
+                </div>
+                <div class="orders" id="order3">
+                    <div class="order">
+                        <label for="flavor">Flavor</label>
+                        <select name="flavor" id="flavor">
+                            <option value="" selected disabled></option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="creamy">Creamy</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="milky">Milky</option>
+                        </select>   
+                    </div>
+                    <div class="order">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                    </div>
+                    <button>Submit Order</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/seasonal.png" alt="">
+                <div class="card-label">
+                    <h3>Seasonal Special</h3>
+                    <button onclick="Order4()">Customize & Order</button>                
+                </div>
+                <div class="orders" id="order4">
+                    <div class="order">
+                        <label for="flavor">Flavor</label>
+                        <select name="flavor" id="flavor">
+                            <option value="" selected disabled></option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="creamy">Creamy</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="milky">Milky</option>
+                        </select>   
+                    </div>
+                    <div class="order">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                    </div>
+                    <button>Submit Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimony" id="testimony">
+        <h3>Testimonies</h3>
+        <div class="test-cards">
+            <div class="test-card">
+                <div class="test-card-head">
+                    <img src="images/profile11.jpg" alt="">
+                    <p>Emily R.</p>               
+                </div>
+                <div class="test-content">
+                    <p><i>"The cake was absolutely delicious and beautifully decorated"</i></p>
+                </div>
+            </div>
+
+            
+            <div class="test-card">
+                <div class="test-card-head">
+                    <img src="images/profile22.jpg" alt="">
+                    <p>James D.</p>               
+                </div>
+                <div class="test-content">
+                    <p><i>"The cupcakes was a bit at our party, the taste is out of this world"</i></p>
+                </div>
+            </div>
+            
+            <div class="test-card">
+                <div class="test-card-head">
+                    <img src="images/profile11.jpg" alt="">
+                    <p>Emily R.</p>               
+                </div>
+                <div class="test-content">
+                    <p><i>"The cake was absolutely delicious and beautifully decorated"</i></p>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div class="test-card-head">
+                    <img src="images/profile22.jpg" alt="">
+                    <p>James D.</p>               
+                </div>
+                <div class="test-content">
+                    <p><i>"The cupcakes was a bit at our party, the taste is out of this world"</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <form action="">
+            <h3>Contact Us</h3>
+            <div class="top">
+                <div class="one">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" required>            
+                </div>
+
+                <div class="one">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" required>            
+                </div>            
+            </div>
+            
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" required></textarea>
+            <button>Send Message</button>
+        </form>
+
+        <div class="follow">
+            <h3>Follow Us</h3>
+            <div class="acc-links">
+                <div class="acc-link">
+                    <a href="#">Facebook</a>
+                </div>
+                <div class="acc-link">
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="acc-link">
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div class="acc-link">
+                    <a href="#">Youtube</a>
+                </div>
+                <div class="acc-link">
+                    <a href="#">TikTok</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- &copy;2025 -->
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
