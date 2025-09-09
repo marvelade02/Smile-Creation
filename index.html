@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <nav class="navbar">
         <div class="right">
             <div>
@@ -29,6 +30,7 @@
 
     </nav>
         <ul class="side-bar">
+            
             <li><img src="images/close.png" alt="" style="filter: invert();" onclick="hideSidebar()"></li>
             <li><a href="#hero-section">Home</a></li>
             <li><a href="#treats">Treats</a></li>                    <li><a href="#about">About</a></li>
@@ -43,7 +45,7 @@
             <h3>Welcome to 
 <b>SMILE CREATIONS AND TREATS</b></h3>
             <p><i>Crafted with Joy, Delivered with Love</i></p>
-            <button>Explore treats</button>
+            <button onclick="gotoTreats()">Explore treats</button>
         </div>      
         <div class="hero-img">
             <img src="images/cake.png" alt="cake">
@@ -73,17 +75,24 @@ and a sprinkle of love.</i></p>
                 <p>Add-ons</p>
             </div>
         </div>
+        <div class="overlay" id="overlay"></div>
         <div class="cards">
             <div class="card">
                 <img src="images/craftcake.png" alt="">
                 <div class="card-label">
                     <h3>Craft Cake</h3>
-                    <button onclick="Order1()" id="close1">Customize & Order</button>                
+                    <button onclick="openOrder('order1')">Customize & Order</button>                
                 </div>
                 <div class="orders" id="order1">
+                    <h3>Craft Cake</h3>
+                    <button class="close-btn">&times;</button>
+                    <div class="price">
+                        <h3>Price</h3>
+                        <p>$5000</p>
+                    </div>
                     <div class="order">
-                        <label for="flavor">Flavor</label>
-                        <select name="flavor" id="flavor">
+                        <label for="flavor1" class="a">Flavor</label>
+                        <select name="flavor1" id="flavor1">
                             <option value="" selected disabled></option>
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
@@ -92,23 +101,29 @@ and a sprinkle of love.</i></p>
                         </select>   
                     </div>
                     <div class="order">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                        <label for="quantity1">Quantity</label>
+                        <input type="number" id="quantity1" name="quantity1" value="1" required>  
                     </div>
-                    <button>Submit Order</button>
+                    <button class="b">Submit Order</button>
                 </div>
             </div>
             <div class="card">
                 <img src="images/cupcakes.png" alt="">
                 <div class="card-label">
                     <h3>Cupcakes</h3>
-                    <button onclick="Order2()">Customize & Order</button>                
+                    <button onclick="openOrder('order2')">Customize & Order</button>                
                 </div>
                 <div class="orders" id="order2">
+                    <h3>Cupcakes</h3>
+                    <div class="price">
+                        <h3>Price</h3>
+                        <p id="price">2500</p>
+                    </div>
+                    <button class="close-btn">&times;</button>
                     <div class="order">
-                        <label for="flavor">Flavor</label>
-                        <select name="flavor" id="flavor">
-                            <option value="" selected disabled></option>
+                        <label for="flavor2" class="a">Flavor</label>
+                        <select name="flavor2" id="flavor2" required>
+                            <!-- <option value="" selected disabled hidden>flavor</option> -->
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
                             <option value="chocolate">Chocolate</option>
@@ -116,22 +131,34 @@ and a sprinkle of love.</i></p>
                         </select>   
                     </div>
                     <div class="order">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                        <label for="quantity2">Quantity</label>
+                        <input type="number" id="quantity2" name="quantity2" value="1" required>  
                     </div>
-                    <button>Submit Order</button>
+                    <div class="d">
+                    <h3 id="totalPrice"></h3>
+                    <button class="b"  id="s" onclick="calculatePrice()">Submit Order</button>
+                    </div>
+                    <div class="confirmOrder" id="confirmOrder1">
+                        <p id="confirmText"></p>
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <img src="images/cookies.png" alt="">
                 <div class="card-label">
                     <h3>Cookies</h3>
-                    <button onclick="Order3()">Customize & Order</button>                
+                    <button onclick="openOrder('order3')">Customize & Order</button>                
                 </div>
                 <div class="orders" id="order3">
+                    <h3>Cookies</h3>
+                    <div class="price">
+                        <h3>Price</h3>
+                        <p>$2000</p>
+                    </div>
+                    <button class="close-btn">&times;</button>
                     <div class="order">
-                        <label for="flavor">Flavor</label>
-                        <select name="flavor" id="flavor">
+                        <label for="flavor3" class="a">Flavor</label>
+                        <select name="flavor3" id="flavor3">
                             <option value="" selected disabled></option>
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
@@ -140,22 +167,28 @@ and a sprinkle of love.</i></p>
                         </select>   
                     </div>
                     <div class="order">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                        <label for="quantity3">Quantity</label>
+                        <input type="number" id="quantity3" name="quantity3" value="1" required>  
                     </div>
-                    <button>Submit Order</button>
+                    <button class="b">Submit Order</button>
                 </div>
             </div>
             <div class="card">
                 <img src="images/seasonal.png" alt="">
                 <div class="card-label">
                     <h3>Seasonal Special</h3>
-                    <button onclick="Order4()">Customize & Order</button>                
+                    <button onclick="openOrder('order4')">Customize & Order</button>                
                 </div>
                 <div class="orders" id="order4">
+                    <h3>Seasonal Special</h3>
+                    <div class="price">
+                        <h3>Price</h3>
+                        <p>$7500</p>
+                    </div>
+                    <button class="close-btn">&times;</button>
                     <div class="order">
-                        <label for="flavor">Flavor</label>
-                        <select name="flavor" id="flavor">
+                        <label for="flavor4">Flavor</label>
+                        <select name="flavor4" id="flavor4">
                             <option value="" selected disabled></option>
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
@@ -164,10 +197,10 @@ and a sprinkle of love.</i></p>
                         </select>   
                     </div>
                     <div class="order">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" id="quantity" name="quantity" value="1" required>  
+                        <label for="quantity4" class="a">Quantity</label>
+                        <input type="number" id="quantity4" name="quantity4" value="1" required>  
                     </div>
-                    <button>Submit Order</button>
+                    <button class="b">Submit Order</button>
                 </div>
             </div>
         </div>
