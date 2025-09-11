@@ -88,12 +88,12 @@ and a sprinkle of love.</i></p>
                     <button class="close-btn">&times;</button>
                     <div class="price">
                         <h3>Price</h3>
-                        <p>$5000</p>
+                        <p class="amt1">5000</p>
                     </div>
                     <div class="order">
                         <label for="flavor1" class="a">Flavor</label>
                         <select name="flavor1" id="flavor1">
-                            <option value="" selected disabled></option>
+                            <!-- <option value="" selected disabled></option> -->
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
                             <option value="chocolate">Chocolate</option>
@@ -102,11 +102,16 @@ and a sprinkle of love.</i></p>
                     </div>
                     <div class="order">
                         <label for="quantity1">Quantity</label>
-                        <input type="number" id="quantity1" name="quantity1" value="1" required>  
+                        <input type="number" id="quantity1" name="quantity1" value="1" required min="1">  
                     </div>
-                    <button class="b">Submit Order</button>
+                    <div class="orderMessage">
+                        <h3 class="totalPrice1"></h3>
+                        <p class="confirmText1"></p>
+                    </div>
+                    <button id="submit1" class="button" onclick="calculatePrice1()">Submit Order</button>
                 </div>
             </div>
+
             <div class="card">
                 <img src="images/cupcakes.png" alt="">
                 <div class="card-label">
@@ -117,7 +122,7 @@ and a sprinkle of love.</i></p>
                     <h3>Cupcakes</h3>
                     <div class="price">
                         <h3>Price</h3>
-                        <p id="price">2500</p>
+                        <p class="amt">2500</p>
                     </div>
                     <button class="close-btn">&times;</button>
                     <div class="order">
@@ -132,16 +137,15 @@ and a sprinkle of love.</i></p>
                     </div>
                     <div class="order">
                         <label for="quantity2">Quantity</label>
-                        <input type="number" id="quantity2" name="quantity2" value="1" required>  
+                        <input type="number" id="quantity2" name="quantity2" value="1" required min="1">  
                     </div>
-                    <div class="d">
-                    <h3 id="totalPrice"></h3>
-                    <button class="b"  id="s" onclick="calculatePrice()">Submit Order</button>
+                    <div class="orderMessage">
+                        <h3 class="totalPrice"></h3>
+                        <p class="confirmText"></p>
                     </div>
-                    <div class="confirmOrder" id="confirmOrder1">
-                        <p id="confirmText"></p>
-                    </div>
+                    <button id="submit2" class="button" onclick="calculatePrice2()">Submit Order</button>
                 </div>
+
             </div>
             <div class="card">
                 <img src="images/cookies.png" alt="">
@@ -153,13 +157,13 @@ and a sprinkle of love.</i></p>
                     <h3>Cookies</h3>
                     <div class="price">
                         <h3>Price</h3>
-                        <p>$2000</p>
+                        <p class="amt3">2000</p>
                     </div>
                     <button class="close-btn">&times;</button>
                     <div class="order">
                         <label for="flavor3" class="a">Flavor</label>
                         <select name="flavor3" id="flavor3">
-                            <option value="" selected disabled></option>
+                            <!-- <option value="" selected disabled></option> -->
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
                             <option value="chocolate">Chocolate</option>
@@ -168,9 +172,13 @@ and a sprinkle of love.</i></p>
                     </div>
                     <div class="order">
                         <label for="quantity3">Quantity</label>
-                        <input type="number" id="quantity3" name="quantity3" value="1" required>  
+                        <input type="number" id="quantity3" name="quantity3" value="1" required min="1">  
                     </div>
-                    <button class="b">Submit Order</button>
+                    <div class="orderMessage">
+                        <h3 class="totalPrice3"></h3>
+                        <p class="confirmText3"></p>
+                    </div>
+                    <button id="submit3" class="button" onclick="calculatePrice3()">Submit Order</button>
                 </div>
             </div>
             <div class="card">
@@ -183,13 +191,13 @@ and a sprinkle of love.</i></p>
                     <h3>Seasonal Special</h3>
                     <div class="price">
                         <h3>Price</h3>
-                        <p>$7500</p>
+                        <p class="amt4">7500</p>
                     </div>
                     <button class="close-btn">&times;</button>
                     <div class="order">
                         <label for="flavor4">Flavor</label>
                         <select name="flavor4" id="flavor4">
-                            <option value="" selected disabled></option>
+                            <!-- <option value="" selected disabled></option> -->
                             <option value="vanilla">Vanilla</option>
                             <option value="creamy">Creamy</option>
                             <option value="chocolate">Chocolate</option>
@@ -198,13 +206,19 @@ and a sprinkle of love.</i></p>
                     </div>
                     <div class="order">
                         <label for="quantity4" class="a">Quantity</label>
-                        <input type="number" id="quantity4" name="quantity4" value="1" required>  
+                        <input type="number" id="quantity4" name="quantity4" value="1" required min="1">  
                     </div>
-                    <button class="b">Submit Order</button>
+                    <div class="orderMessage">
+                        <h3 class="totalPrice4"></h3>
+                        <p class="confirmText4"></p>
+                    </div>
+                    <button id="submit4" class="button" onclick="calculatePrice4()">Submit Order</button>
                 </div>
             </div>
         </div>
+
     </section>
+
     <section class="testimony" id="testimony">
         <h3>Testimonies</h3>
         <div class="test-cards">
@@ -300,3 +314,7 @@ and a sprinkle of love.</i></p>
 </body>
 <script src="script.js"></script>
 </html>
+
+
+
+

@@ -450,19 +450,11 @@ form button:active {
     border-radius: 5px;
 }
 
-.order select {
-    /* margin-top: 30px; */
-}
-.order .a {
-    /* margin-top: 30px; */
-}
-
 .order input {
     text-align: right;
-
 }
 
-.orders button {
+.orders .button {
     padding: 8px;
     border: 2px solid hsl(27, 55%, 32%);
     background: white;
@@ -472,18 +464,15 @@ form button:active {
     transition: .2s;
     cursor: pointer;
     display: block;
-}
-
-.orders .b {
     width: 100%;
 }
 
-.orders button:hover {
+.orders .button:hover {
     background: hsl(27, 55%, 32%);
     color: white;
 }
 
-.orders button:active {
+.orders .button:active {
     background: hsl(27, 60%, 20%);
 }
 
@@ -536,17 +525,8 @@ form button:active {
     font-weight: 700;
 }
 
-.confirmOrder button {
-    display: none;
-}
-
-.b {
-    
-    display: block;
-}
-
-#confirmText {
+.confirmText, .confirmText1, .confirmText3, .confirmText4 {
     color: rgb(3, 77, 3);
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 700;
 }
